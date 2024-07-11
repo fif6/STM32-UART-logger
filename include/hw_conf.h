@@ -33,8 +33,11 @@
 
 //---------------------------------------------------------
 
+void GPIO_Init(void);
+
 void UART3_Init(void);
 
 void DMA_UART3_Init(void);
+
 
 #endif // HW_INIT_H_

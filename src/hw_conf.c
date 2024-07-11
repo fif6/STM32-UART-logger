@@ -1,5 +1,6 @@
 #include "stm32f0xx_hal.h"
 #include "hw_conf.h"
+#include "main.h"
 
 
 extern UART_HandleTypeDef huart3;

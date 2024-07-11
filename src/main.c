@@ -24,6 +24,7 @@ void Error_Handler(void) { // Software error
 
 int main(void) {
 
+    GPIO_Init();
     UART3_Init();
     DMA_UART3_Init();
 
