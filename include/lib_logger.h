@@ -10,6 +10,10 @@ void Log_Urgent(char*); // Send a message via UART with a high priority. Half-Bl
 void Log_Queue(char*); // Put message into the queue (low priority) - non blocking.
 
 void Log_UART_TransferComplete(UART_HandleTypeDef*); // This function need to be called from an IRQ handler when the UART transfer complete.
+
+
+// Redeclare HAL weak function HAL_UART_TxCpltCallback()
+void HAL_UART_TxCpltCallback(UART_HandleTypeDef *huart);
 /*
 void HAL_UART_TxCpltCallback(UART_HandleTypeDef *huart) {
    Log_UART_TransferComplete(huart);

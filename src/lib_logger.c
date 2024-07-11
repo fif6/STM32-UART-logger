@@ -23,6 +23,7 @@ volatile struct {
 char buf_urgent[MSG_LEN];
 char buf_queue[MSG_LEN * QUEUE_LEN];
 
+
 void Log_Init(UART_HandleTypeDef* huart) {
     config.huart_ = huart;
     config.uart_is_busy_ = 0;
@@ -145,4 +146,7 @@ void Log_Urgent(const char* msg) { // Half-Bloking call
 }
 
 
-
+// Redeclare HAL weak function HAL_UART_TxCpltCallback()
+void HAL_UART_TxCpltCallback(UART_HandleTypeDef *huart) {
+   Log_UART_TransferComplete(huart);
+}

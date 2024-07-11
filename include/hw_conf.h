@@ -33,20 +33,8 @@
 
 //---------------------------------------------------------
 
-void HAL_MspInit(void);
-
-void SystemClock_Config(void);
-
-void GPIO_Init(void);
-
-void I2C1_Init(void);
-
 void UART3_Init(void);
 
-void DMA_Init(void);
-
 void DMA_UART3_Init(void);
-
-void RTC_Init(void);
 
 #endif // HW_INIT_H_
